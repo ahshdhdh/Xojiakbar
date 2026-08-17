@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Xojiakbar - Hisobchi | Buxgalteriya va Vergi Xizmatlari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">X</div>
+                <span class="brand-text">Xojiakbar Hisobchi</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menyuni ochish" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Xizmatlar</a>
+                <a href="#process" class="nav-link">Jarayon</a>
+                <a href="#contact" class="nav-link">Bog'lanish</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">Buxgalteriya • Soliq • Hisobot</div>
+                <h1>Moliyangiz tartibli bo'lsa, biznesingiz muvaffaqiyatli rivojlanadi.</h1>
+                <p>Men kichik korxonalar, individual tadbirkorlar va tashkilotlarning buxgalteriya jarayonlarini tartibga solaman. Hujjatlarni saqlash, soliqni to'lash, oylik hisobotlar va professional maslahat — hammasini nazorat ostida tutaman.</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                        Bog'lanish
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                    
+                </div>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span>Muddatga rioya qilish</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span>Maxfiy ma'lumotlar himoyasi</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <span>Doimiy kuzatuv</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-preview">
+                <div class="finance-card">
+                    <div class="finance-header">
+                        <h3>Oylik Ko'rib Chiqish</h3>
+                        <span class="status-badge">Tayyor</span>
+                    </div>
+                    <div class="finance-chart">
+                        <div class="chart-bar" style="height: 60%;"></div>
+                        <div class="chart-bar" style="height: 80%;"></div>
+                        <div class="chart-bar" style="height: 45%;"></div>
+                        <div class="chart-bar" style="height: 75%;"></div>
+                    </div>
+                    <div class="finance-checklist">
+                        <div class="checklist-item">✓ Soliq hisobotlari topshirildi</div>
+                        <div class="checklist-item">✓ Hujjatlar tekshirildi</div>
+                        <div class="checklist-item">✓ To'lov rejasi tayyor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="kicker">XIZMATLAR</span>
+                <h2>Biznesingizni tartibga soladigan buxgalteriya xizmatlari.</h2>
+                <p>Siz alohida xizmatlarni yoki to'liq oylik paketni tanlashingiz mumkin. Har bir ish muddatlar, hujjatlar va xavfsizlikka maxsus e'tibor bilan amalga oshiriladi.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-service="buxgalteriya" onclick="openModal('buxgalteriya')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="7" width="18" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 3v4M8 3v4M3 11h18"></path>
+                        </svg>
+                    </div>
+                    <h3>Buxgalteriya hisobi</h3>
+                    <p>Daromad, xarajat, hisab-kitoblar va har kunlik moliyaviy operatsiyalar tartibda saqlanadi, oyning oxirida aniq rasm beradi.</p>
+                </div>
+
+                <div class="service-card" data-service="vergi" onclick="openModal('vergi')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="19" x2="12" y2="11"></line>
+                            <polyline points="9 14 12 11 15 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Soliq Hisoboti</h3>
+                    <p>Soliq deklaratsiyalari, muddatlar va majburiy topshirishlar ehtiyotkorlik bilan boshqariladi, kechikishlar va jarima riskini kamaytiradi.</p>
+                </div>
+
+                <div class="service-card" data-service="moliyaviy" onclick="openModal('moliyaviy')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Oylik Moliyaviy Xizmat</h3>
+                    <p>Xodimlar ish haqi, kesmalar va bog'langan hujjatlar aniqlik bilan hisoblanadi.</p>
+                </div>
+
+                <div class="service-card" data-service="hujjat" onclick="openModal('hujjat')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            <circle cx="12" cy="13" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>Hujjat Boshqaruvi</h3>
+                    <p>Shartnomalar, hisob-fakturalar, moliyaviy hujjatlar va qo'llab-quvvatlash materiallari to'liq, tartibda va audit uchun tayyor.</p>
+                </div>
+
+                <div class="service-card" data-service="maslahat" onclick="openModal('maslahat')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Biznes Maslahat</h3>
+                    <p>Vergi strategiyasi, xarajatlar, pul oqimi va moliyaviy hisobot bo'yicha amaliy maslahat oling.</p>
+                </div>
+
+                <div class="service-card" data-service="qollab-quvvatlash" onclick="openModal('qollab-quvvatlash')">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <circle cx="19" cy="12" r="1"></circle>
+                            <circle cx="5" cy="12" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3>Oylik Qo'llab-Quvvatlash</h3>
+                    <p>Har oyning oxirida moliyaviy ko'rib chiqish, eslatma va keyingi qadamlar uchun aniq rejani olasiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="kicker">JARAYON</span>
+                <h2>Oson jarayon, ishonchli natijalar.</h2>
+                <p>Avval sizning holatingizni tushunib olamiz. Keyin buxgalteriya tizimini tartibga solamiz va oylik hisobotlar bilan doimiy qo'llab-quvvatlashni davom ettiramiz.</p>
+            </div>
+
+            <div class="process-cards">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Hozirgi Vaziyatning Ko'rib Chiqilishi</h3>
+                    <p>Sizning hujjatlarni, soliq tuzilmasi va mavjud muammolarni baholaymiz.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Tizimni Tartibga Solish</h3>
+                    <p>Hujjatlar, to'lovlar, hisobotlar va muddatlar uchun tuzilma ish jarayonini o'rnatamiz.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Doimiy Kuzatuv</h3>
+                    <p>Har oyning oxirida natijalar, risklar va keyingi to'lovlarni qoplaydigan oson tushunuvchan hisobot olasiz.</p>
+                </div>
+            </div>
+
+            <div class="trust-strip">
+                <div class="trust-strip-item">
+                    <span class="trust-title">Maxfiylik:</span>
+                    <span>Mijoz ma'lumotlari faqat buxgalteriya maqsadlari uchun ishlatiladi.</span>
+                </div>
+                <div class="trust-strip-item">
+                    <span class="trust-title">Aniqlik:</span>
+                    <span>Har bir ko'rsatkich qo'llab-quvvatlash hujjatlari va muddatlar bilan tekshiriladi.</span>
+                </div>
+                <div class="trust-strip-item">
+                    <span class="trust-title">Oson Muloqot:</span>
+                    <span>Telegram, telefon yoki aloqa shakli orqali tez bog'lanamiz.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <span class="kicker">BOG'LANISH</span>
+                <h2>Birinchi suhbatda buxgalteriya ehtiyojlaringizni tushunib olamiz.</h2>
+                <p>Telefon yoki Telegram orqali bog'lanish yoki forma orqali qisqacha xabar qoldiring. Qanday hujjatlar kerak ekanini tushuntiraman va sizning buxgalteriya ehtiyojlari uchun eng yaxshi usulini ko'rsataman.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h4>Telefon</h4>
+                        <a href="tel:+998946945796">+998 94 694 57 96</a>
+                    </div>
+                    <div class="contact-method">
+                        <h4>Telegram</h4>
+                        <a href="https://t.me/Muhitdinov_Xojiakbarxon" target="_blank">@Muhitdinov_Xojiakbarxon</a>
+                    </div>
+                    <div class="contact-method">
+                        <h4>Elektron pochta</h4>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhitdinovxojiakbarxon@gmail.com" target="_blank">
+                            muhitdinovxojiakbarxon@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ism</label>
+                        <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactInfo">Telefon yoki Telegram</label>
+                        <input type="tel" id="contactInfo" name="contact" placeholder="+998 90 000 00 00 yoki @foydalanuvchi nomi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Qisqa ta'rif</label>
+                        <textarea id="message" name="message" placeholder="Masalan: Menga soliq hisoboti va oylik buxgalteriya xizmatlari kerak." rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">So'rov Jo'natish</button>
+                </form>
+                <div class="form-message" id="formMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modal -->
+    <div class="modal-overlay" id="serviceModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-inner">
+                <div class="modal-header">
+                    <div class="modal-icon" id="modalIcon"></div>
+                    <h2 id="modalTitle"></h2>
+                </div>
+                <div class="modal-body">
+                    <p id="modalDescription"></p>
+                    <div class="modal-features">
+                        <h4>Xizmat xususiyatlari:</h4>
+                        <ul id="modalFeatures"></ul>
+                    </div>
+                    <div class="modal-price">
+                        <h4>Narx:</h4>
+                        <p id="modalPrice"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-cta" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); closeModal();">
+                    Bog'lanish
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Xojiakbar Hisobchi. Ishonchli buxgalteriya va soliq xizmatlari.</p>
+            <a href="#hero" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Yuqoriga</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
